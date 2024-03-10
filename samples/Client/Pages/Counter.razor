@@ -1,0 +1,32 @@
+﻿@page "/counter"
+@using Contract.Services.WeatherForecast
+@using Contract.Services.WeatherForecast.Models
+
+@inject IWeatherForecastService WeatherForecastService;
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private async Task IncrementCount()
+    {
+        currentCount++;
+
+        await WeatherForecastService.CreateForecast(new WeatherForecastDto
+        {
+            Date = DateOnly.FromDateTime(DateTime.UtcNow),
+            Summary = "Test dto in body",
+            TemperatureC = 33
+        });
+        
+        await WeatherForecastService.DeleteCountryById(151);
+    }
+
+}
