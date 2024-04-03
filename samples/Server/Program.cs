@@ -27,3 +27,5 @@ app.UseCors(x => x
     .AllowCredentials()); // allow credentials
 
 app.Run();
+
+public partial class Program { }

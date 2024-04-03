@@ -15,5 +15,5 @@ public interface IWeatherForecastService
     public Task<WeatherForecastDto> GetSingleForecastById(int forecastId);
 
     [Post("/api/v1/weatherforecast")]
-    public Task CreateForecast([Body]WeatherForecastDto newForecast);
+    public Task<WeatherForecastDto> CreateForecast([Body]WeatherForecastDto newForecast);
 }
