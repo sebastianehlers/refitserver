@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <LangVersion>latest</LangVersion>
-        <AssemblyName>RefitServer.Attributes</AssemblyName>
-        <RootNamespace>RefitServer.Attributes</RootNamespace>
-    </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<AssemblyName>RefitServer.Attributes</AssemblyName>
+		<RootNamespace>RefitServer.Attributes</RootNamespace>
+		<IsPackable>true</IsPackable>
+	</PropertyGroup>
 
 </Project>
